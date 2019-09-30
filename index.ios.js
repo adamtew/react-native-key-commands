@@ -31,6 +31,7 @@ export class KeyCommandsView extends React.Component {
     const { KeyCommandEvent } = NativeModules;
     const eventEmitter = new NativeEventEmitter(KeyCommandEvent);
 
+    // TODO: Implement dynamic events to support multiple key commands
     this.subscription = eventEmitter.addListener('KeyCommandEvent', this.props.command);
     NativeModules.KeyCommandsView.registerKeyCommand('KeyCommandEvent', this.props.input, this.props.modifier)
   }
