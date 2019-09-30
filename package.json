@@ -2,22 +2,22 @@
   "name": "react-native-key-commands",
   "title": "React Native Key Commands",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Enables the use of UIKeyCommands in iOS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-ui-commands.git",
-    "baseUrl": "https://github.com/github_account/react-native-ui-commands"
+    "url": "git+https://github.com/adamtew/react-native-key-commands.git",
+    "baseUrl": "https://github.com/adamtew/react-native-key-commands"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Adam Tew",
+    "email": "email@email.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",

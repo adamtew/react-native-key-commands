@@ -7,20 +7,16 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.summary      = package["description"]
   s.description  = <<-DESC
-                  react-native-ui-commands
+                  react-native-key-commands
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-ui-commands"
+  s.homepage     = "https://github.com/adamtew/react-native-key-commands"
   s.license      = "MIT"
-  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.authors      = { "Your Name" => "yourname@email.com" }
+  s.authors      = { "Adam Tew" => "email@gmail.com" }
   s.platforms    = { :ios => "9.0", :tvos => "10.0" }
-  s.source       = { :git => "https://github.com/github_account/react-native-ui-commands.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/adamtew/react-native-key-commands.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-	
-  # s.dependency "..."
 end
-
