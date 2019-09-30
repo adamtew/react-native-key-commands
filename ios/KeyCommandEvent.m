@@ -20,10 +20,10 @@ RCT_EXPORT_MODULE();
   return @[@"KeyCommandEvent"];
 }
 
-- (void)calendarEventReminderReceived:(NSNotification *)notification
+- (void)notificationHandler:(NSNotification *)notification
 {
   if (hasListeners) {
-    [self sendEventWithName:@"KeyCommandEvent"  body:@"name"];
+    [self sendEventWithName:@"KeyCommandEvent"  body:@"noop"];
   }
 }
 
