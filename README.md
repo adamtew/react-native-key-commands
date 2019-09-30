@@ -1,43 +1,38 @@
-# react-native-ui-commands
+# react-native-key-commands
 
 ## Getting started
 
-`$ npm install react-native-ui-commands --save`
+`$ npm install react-native-key-commands --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-ui-commands`
-
-### Manual installation
+`$ react-native link react-native-key-commands`
 
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-ui-commands` and add `UiCommands.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libUiCommands.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+this project supports `Podfile`s. Add something like this to your `Podfile`:
+
+```
+pod 'RCTKeyCommands', :path => '../node_modules/react-native-key-commands'
+```
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import com.reactlibrary.UiCommandsPackage;` to the imports at the top of the file
-  - Add `new UiCommandsPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-ui-commands'
-  	project(':react-native-ui-commands').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-ui-commands/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-ui-commands')
-  	```
-
+Currently no support for Android
 
 ## Usage
-```javascript
-import UiCommands from 'react-native-ui-commands';
 
-// TODO: What to do with the module?
-UiCommands;
+```javascript
+import { KeyCommandsView, Modifiers } from 'react-native-key-commands';
+
+
+...
+  <KeyCommandsView
+    input='p'
+    modifier={Modifiers.Command}
+    command={() => console.log('you just hit <CMD>+p!')}
+  />
 ```
+
+Currently, this package only supports a single command

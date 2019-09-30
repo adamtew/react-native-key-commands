@@ -9,6 +9,5 @@
 @interface KeyCommandsView : UIView <RCTBridgeModule>
 
 @property (nonatomic, weak) RCTBridge *bridge;
-@property (nonatomic, copy) RCTBubblingEventBlock onRegionChange;
 
 @end

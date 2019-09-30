@@ -21,7 +21,7 @@ RCT_EXPORT_MODULE();
 
 + (BOOL)requiresMainQueueSetup
 {
-  return YES;  // only do this if your module initialization relies on calling UIKit!
+  return YES;
 }
 
 @end

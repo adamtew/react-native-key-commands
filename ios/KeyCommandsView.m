@@ -5,7 +5,6 @@
 @synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE()
-RCT_EXPORT_VIEW_PROPERTY(onRegionChange, RCTBubblingEventBlock)
 
 - (BOOL)canBecomeFirstResponder {
     return YES;
@@ -13,7 +12,6 @@ RCT_EXPORT_VIEW_PROPERTY(onRegionChange, RCTBubblingEventBlock)
 
 - (void)emitEvent:(NSString *)eventName
 {
-        RCTLogInfo(@"inside emitEvent:");
   [_bridge enqueueJSCall:@"RCTDeviceEventEmitter"
                   method:@"emit"
                        args:@[eventName]
