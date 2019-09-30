@@ -2,7 +2,7 @@ import React from 'react'
 
 const noop = () => {};
 
-export const Modifiers {
+export const Modifiers = {
   Shift: noop,
   Control: noop,
   Alternate: noop,
@@ -18,8 +18,4 @@ export const Inputs = {
   InputEscape: noop,
 }
 
-export class KeyCommandsView extends React.Component {
-  render () {
-    return <></>
-  }
-}
+export const KeyCommandsView = () => <></>
