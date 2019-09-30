@@ -8,29 +8,28 @@ import {
 } from 'react-native'
 
 import React from 'react'
-const{ KeyCommandModifiers } = NativeModules;
+const { KeyCommandModifiers } = NativeModules;
 
-export const Modifiers = {
+export const Modifiers = Platform.OS === "ios" ? {
   Shift: KeyCommandModifiers.ModifierShift,
   Control: KeyCommandModifiers.ModifierControl,
   Alternate: KeyCommandModifiers.ModifierAlternate,
   Command: KeyCommandModifiers.ModifierCommand,
   NumericPad: KeyCommandModifiers.ModifierNumericPad,
-}
+} : {}
 
-export const Inputs = {
+export const Inputs = Platform.OS === "ios" ? {
   InputUpArrow: KeyCommandModifiers.InputUpArrow,
   InputDownArrow: KeyCommandModifiers.InputDownArrow,
   InputLeftArrow: KeyCommandModifiers.InputLeftArrow,
   InputRightArrow: KeyCommandModifiers.InputRightArrow,
   InputEscape: KeyCommandModifiers.InputEscape,
-}
+} : {}
 
-const View = requireNativeComponent('KeyCommand')
+const View = Platform.OS === "ios" ? requireNativeComponent('KeyCommand') : {}
 
 export class KeyCommandsView extends React.Component {
   componentDidMount() {
-    console.log('NativeModules', NativeModules)
     const { KeyCommandEvent } = NativeModules;
     const eventEmitter = new NativeEventEmitter(KeyCommandEvent);
 
@@ -43,6 +42,6 @@ export class KeyCommandsView extends React.Component {
   }
 
   render () {
-    return <View {...this.props} />
+    return Platform.OS === "ios" ? <View {...this.props} /> : <></>
   }
 }
