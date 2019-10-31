@@ -42,6 +42,6 @@ export class KeyCommandsView extends React.Component {
   }
 
   render () {
-    return <View {...this.props} />
+    return <View {...this.props} />;
   }
 };
