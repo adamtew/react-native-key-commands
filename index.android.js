@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const noop = () => {};
 
@@ -8,7 +8,7 @@ export const Modifiers = {
   Alternate: noop,
   Command: noop,
   NumericPad: noop,
-}
+};
 
 export const Inputs = {
   InputUpArrow: noop,
@@ -16,6 +16,6 @@ export const Inputs = {
   InputLeftArrow: noop,
   InputRightArrow: noop,
   InputEscape: noop,
-}
+};
 
-export const KeyCommandsView = () => <></>
+export const KeyCommandsView = () => <></>;
