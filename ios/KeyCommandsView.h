@@ -1,3 +1,5 @@
+// Responsible for showing the key commands
+
 #import <React/RCTBridgeModule.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
